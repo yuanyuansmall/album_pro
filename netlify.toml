@@ -1,0 +1,18 @@
+[build]
+  command = "npm run build"
+  publish = "build/"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[env]
+  [env.production]
+    [build.environment]
+      NODE_ENV = "production"

@@ -1,0 +1,166 @@
+.album-list {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.album-list h2 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.create-btn {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 15px;
+  transition: transform 0.2s;
+}
+
+.create-btn:hover {
+  transform: translateY(-2px);
+}
+
+.create-form {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.create-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.form-actions button {
+  flex: 1;
+  padding: 6px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.form-actions button[type="submit"] {
+  background: #667eea;
+  color: white;
+}
+
+.form-actions button[type="button"] {
+  background: #ddd;
+  color: #333;
+}
+
+.albums-container {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.album-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+  background: #f5f5f5;
+}
+
+.album-item:hover {
+  background: #eee;
+}
+
+.album-item.active {
+  background: #e8eaf6;
+  border-left: 4px solid #667eea;
+  padding-left: 8px;
+}
+
+.album-cover {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.album-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.no-cover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ddd;
+  font-size: 24px;
+}
+
+.album-info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 0;
+}
+
+.album-info h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.delete-btn {
+  background: #fee;
+  color: #c00;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  background: #f00;
+  color: white;
+}
+
+.loading, .empty {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+  font-size: 14px;
+}
